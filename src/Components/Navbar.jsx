@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex gap-3">
           <Link href={"/login"} className="btn btn-outline">
             Log in
           </Link>

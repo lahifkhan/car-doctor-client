@@ -17,7 +17,7 @@ const login = () => {
           </div>
           <div className=" p-12">
             <h6 className="text-3xl font-semibold text-primary text-center mb-12">
-              Sign In
+              Log In
             </h6>
             <form>
               <label htmlFor="email">Email</label> <br />
@@ -40,16 +40,16 @@ const login = () => {
                 type="submit"
                 className="w-full btn btn-primary mt-12 text-lg"
               >
-                Sign In
+                Log In
               </button>
             </form>
             <div>
-              <h6 className="my-12 text-center">or sign in with</h6>
+              <h6 className="my-12 text-center">or Log in with</h6>
 
               <h6 className="my-12 text-center">
                 not have account ?{" "}
-                <Link className="text-primary font-semibold" href={"/signup"}>
-                  Sign Up
+                <Link className="text-primary font-semibold" href={"/register"}>
+                  Register
                 </Link>
               </h6>
             </div>
