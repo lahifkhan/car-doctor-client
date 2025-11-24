@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import toast from "react-hot-toast";
 
 const register = () => {
   const handleRegister = async (event) => {
@@ -18,7 +19,10 @@ const register = () => {
         "content-type": "application/json",
       },
     });
+
+    console.log(res);
     if (res.status === 200) {
+      toast.success("Successfully registerd");
       event.target.reset();
     }
   };

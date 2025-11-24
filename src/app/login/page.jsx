@@ -1,8 +1,30 @@
+"use client";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+
 import React from "react";
+import toast from "react-hot-toast";
 
 const login = () => {
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    const res = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (res.error) {
+      toast.error("Wrong email or password");
+    } else {
+      toast.success("successfully Login");
+      window.location.href = "/";
+    }
+  };
   return (
     <div>
       <div className="container px-24 mx-auto py-24">
@@ -19,7 +41,7 @@ const login = () => {
             <h6 className="text-3xl font-semibold text-primary text-center mb-12">
               Log In
             </h6>
-            <form>
+            <form onSubmit={handleLogin}>
               <label htmlFor="email">Email</label> <br />
               <input
                 type="text"
