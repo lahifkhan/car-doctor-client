@@ -19,7 +19,10 @@ const Services = async () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
         {services.map((item, index) => (
-          <div key={index} className="card card-compact bg-base-100 shadow-xl">
+          <div
+            key={index}
+            className="card card-compact bg-base-100 shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
             <figure className="overflow-hidden h-[30vh]">
               <Image height={240} width={640} src={item.img} alt={item.title} />
             </figure>
