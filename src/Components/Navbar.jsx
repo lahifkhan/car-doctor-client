@@ -91,10 +91,10 @@ const Navbar = () => {
                     <p className="text-sm text-gray-600">{data.user.email}</p>
                   </li>
                   <li>
-                    <Link href="/add-product">Add Product</Link>
+                    <Link href="/dashboard/addProduct">Add Product</Link>
                   </li>
                   <li>
-                    <Link href="/manage-products">Manage Products</Link>
+                    <Link href="/dashboard/manageProduct">Manage Products</Link>
                   </li>
                   <li>
                     <button
