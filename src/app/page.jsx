@@ -3,6 +3,7 @@ import Services from "../Components/Services";
 import Banner from "@/Components/Banner";
 import Contact from "@/Components/Contact";
 import MeatOurTeam from "@/Components/MeatOurTeam";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Services></Services>
       <Contact></Contact>
       <MeatOurTeam></MeatOurTeam>
+      <Footer></Footer>
     </div>
   );
 }
