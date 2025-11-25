@@ -11,10 +11,13 @@ const Navbar = () => {
   const Links = (
     <>
       <li>
-        <a>Home</a>
+        <Link href={"/"}>Home</Link>
       </li>
       <li>
-        <a>About</a>
+        <Link href={"/allProducts"}>All Products</Link>
+      </li>
+      <li>
+        <Link href={""}>About</Link>
       </li>
       <li>
         <a>Services</a>
@@ -97,10 +100,7 @@ const Navbar = () => {
                     <Link href="/dashboard/manageProduct">Manage Products</Link>
                   </li>
                   <li>
-                    <button
-                      onClick={() => signOut({ callbackUrl: "/" })}
-                      className="text-red-500"
-                    >
+                    <button onClick={() => signOut()} className="text-red-500">
                       Logout
                     </button>
                   </li>

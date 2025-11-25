@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import Swal from "sweetalert2";
 
 const ManageProductsPage = () => {
   const { data: session } = useSession();
@@ -29,22 +30,39 @@ const ManageProductsPage = () => {
     },
   });
 
-  // // 🗑 Delete Product
-  // const handleDelete = async (id) => {
-  //   const confirmDelete = confirm("Are you sure you want to delete?");
-  //   if (!confirmDelete) return;
+  const handleDelete = async (id) => {
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    });
 
-  //   const res = await fetch(`http://localhost:4000/products/${id}`, {
-  //     method: "DELETE",
-  //   });
+    if (result.isConfirmed) {
+      try {
+        const res = await fetch(`http://localhost:4000/products/${id}`, {
+          method: "DELETE",
+        });
 
-  //   if (res.ok) {
-  //     toast.success("Deleted successfully!");
-  //     refetch();
-  //   } else {
-  //     toast.error("Failed to delete.");
-  //   }
-  // };
+        if (res.ok) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success",
+          });
+          refetch(); // Refresh your product list
+        } else {
+          toast.error("Failed to delete.");
+        }
+      } catch (err) {
+        console.error(err);
+        toast.error("Something went wrong.");
+      }
+    }
+  };
 
   if (isPending)
     return <p className="text-center py-10 text-lg">Loading products...</p>;
@@ -62,7 +80,7 @@ const ManageProductsPage = () => {
 
       <div className="overflow-x-auto">
         <table className="table">
-          <thead className="bg-base-200">
+          <thead className="bg-primary text-white">
             <tr>
               <th>#</th>
               <th>Title</th>
@@ -89,14 +107,18 @@ const ManageProductsPage = () => {
                 <td className="flex gap-4">
                   {/* 👁 View */}
                   <Link href={`/dashboard/manageProduct/${product._id}`}>
-                    <FaEye className="text-blue-500 cursor-pointer" size={20} />
+                    <FaEye className=" cursor-pointer" size={20} />
                   </Link>
 
                   {/* ✏ Edit */}
-                  <FaEdit className="text-green-600 cursor-pointer" size={20} />
+                  <FaEdit className=" cursor-pointer" size={20} />
 
                   {/* 🗑 Delete */}
-                  <FaTrash className="text-red-600 cursor-pointer" size={20} />
+                  <FaTrash
+                    onClick={() => handleDelete(product._id)}
+                    className=" cursor-pointer"
+                    size={20}
+                  />
                 </td>
               </tr>
             ))}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = async () => {
   const res = await fetch("http://localhost:4000/service");
@@ -8,8 +9,8 @@ const Services = async () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="text-center">
-        <h2 className="text-4xl font-bold">Our Service Area</h2>
-        <p className="text-gray-500">
+        <h2 className="text-3xl font-bold text-gray-800 ">Our Service Area</h2>
+        <p className="text-gray-600 mt-2">
           the majority have suffered alteration in some form, by injected
           humour, or randomised <br /> words which dont look even slightly
           believable.{" "}
@@ -29,7 +30,7 @@ const Services = async () => {
                   Price : ${item.price}
                 </h6>
                 <Link href={`/services/${item._id}`}>
-                  <button className="btn btn-primary">View Details</button>
+                  <FaArrowRightLong className="text-primary" />
                 </Link>
               </div>
             </div>

@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const ProductDetailsPage = async ({ params }) => {
+export default async function ProductDetails({ params }) {
   const { id } = await params;
-
   const res = await fetch(`http://localhost:4000/products/${id}`, {
     cache: "no-store", // always fetch fresh data
   });
@@ -11,6 +9,7 @@ const ProductDetailsPage = async ({ params }) => {
   if (!res.ok) throw new Error("Failed to fetch product");
 
   const product = await res.json();
+  console.log(product);
   const {
     title,
     shortDescription,
@@ -20,7 +19,6 @@ const ProductDetailsPage = async ({ params }) => {
     userEmail,
     createdAt,
   } = product;
-
   return (
     <div className="max-w-4xl mx-auto my-12 p-6 bg-white rounded-lg shadow-lg">
       {/* Product Image */}
@@ -40,7 +38,7 @@ const ProductDetailsPage = async ({ params }) => {
         <h1 className="text-3xl font-bold text-primary">{title}</h1>
         <p className="text-gray-600">{shortDescription}</p>
         <p className="text-gray-700">{fullDescription}</p>
-        <p className="text-xl font-semibold text-rose-500">Price: ${price}</p>
+        <p className="text-xl font-semibold text-primary">Price: ${price}</p>
         <p className="text-sm text-gray-500">Added by: {userEmail}</p>
         <p className="text-sm text-gray-500">
           Created at: {new Date(createdAt).toLocaleString()}
@@ -48,16 +46,12 @@ const ProductDetailsPage = async ({ params }) => {
 
         {/* Actions */}
         <div className="flex gap-4 mt-6">
-          <Link
-            href="/dashboard/manageProduct"
-            className="btn btn-primary btn-sm"
-          >
-            Back to Products
+          <Link href="/allProducts" className="btn btn-primary">
+            Back
           </Link>
+          <button className="btn btn-outline btn-primary">Add to Cart</button>
         </div>
       </div>
     </div>
   );
-};
-
-export default ProductDetailsPage;
+}
