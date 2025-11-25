@@ -14,7 +14,7 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const res = await fetch("http://localhost:4000/user", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

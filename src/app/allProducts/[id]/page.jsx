@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default async function ProductDetails({ params }) {
   const { id } = await params;
-  const res = await fetch(`http://localhost:4000/products/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`, {
     cache: "no-store", // always fetch fresh data
   });
 

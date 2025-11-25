@@ -6,7 +6,7 @@ const serviceDetails = async ({ params }) => {
   const p = await params;
   console.log(p);
 
-  const res = await fetch(`http://localhost:4000/service/${p.id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/service/${p.id}`);
   const services = await res.json();
   console.log(services);
   const { _id, title, description, img, price, facility } = services;

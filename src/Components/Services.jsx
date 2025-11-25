@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = async () => {
-  const res = await fetch("http://localhost:4000/service");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/service`);
   const services = await res.json();
   console.log(services);
   return (

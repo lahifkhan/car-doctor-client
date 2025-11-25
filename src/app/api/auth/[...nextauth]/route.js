@@ -24,7 +24,9 @@ export const authOptions = {
           return null;
         }
 
-        const res = await fetch(`http://localhost:4000/user?email=${email}`);
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/user?email=${email}`
+        );
         if (!res.ok) return null;
 
         const currentUser = await res.json();
