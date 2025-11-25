@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
         <NextAuthProvider>
           <ReactQueryProvider>
             <Navbar />
+
             <Toaster />
             {children}
           </ReactQueryProvider>
