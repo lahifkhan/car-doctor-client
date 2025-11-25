@@ -71,9 +71,41 @@ const Navbar = () => {
         <div className="navbar-end flex gap-3">
           {status == "authenticated" ? (
             <>
-              <button onClick={() => signOut()} className="btn btn-outline">
-                Log out
-              </button>
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <Image
+                      src={data.user.image || "/default-user.png"}
+                      alt="User Avatar"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-60"
+                >
+                  <li className="px-4 py-2">
+                    <p className="font-semibold">{data.user.name}</p>
+                    <p className="text-sm text-gray-600">{data.user.email}</p>
+                  </li>
+                  <li>
+                    <Link href="/add-product">Add Product</Link>
+                  </li>
+                  <li>
+                    <Link href="/manage-products">Manage Products</Link>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => signOut({ callbackUrl: "/" })}
+                      className="text-red-500"
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </>
           ) : (
             <>
