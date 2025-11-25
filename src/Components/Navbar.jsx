@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href={"/allProducts"}>All Products</Link>
       </li>
       <li>
-        <Link href={""}>About</Link>
+        <Link href={"/about"}>About</Link>
       </li>
       <li>
         <a>Services</a>
@@ -32,7 +32,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -89,7 +89,7 @@ const Navbar = () => {
                   tabIndex={0}
                   className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-60"
                 >
-                  <li className="px-4 py-2">
+                  <li className=" py-2">
                     <p className="font-semibold">{data.user.name}</p>
                     <p className="text-sm text-gray-600">{data.user.email}</p>
                   </li>

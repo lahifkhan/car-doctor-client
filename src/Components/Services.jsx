@@ -7,7 +7,7 @@ const Services = async () => {
   const services = await res.json();
   console.log(services);
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto mt-12">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-800 ">Our Service Area</h2>
         <p className="text-gray-600 mt-2">
