@@ -31,6 +31,10 @@ Car Doctor is a full-stack web application that allows users to explore car serv
 
 ---
 
+## Server Repository
+
+You can find the backend server code here: [Car Doctor Server](https://github.com/lahifkhan/car-doctor-server)
+
 ## Setup & Installation
 
 ### 1. Clone the repository
