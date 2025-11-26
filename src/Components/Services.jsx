@@ -9,15 +9,17 @@ const Services = async () => {
   return (
     <div className="w-11/12 mx-auto mt-12">
       <div className="text-center">
+        <p className="text-primary font-bold text-xl">Service</p>
         <h2 className="text-3xl font-bold text-gray-800 ">Our Service Area</h2>
         <p className="text-gray-600 mt-2">
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised <br /> words which dont look even slightly
-          believable.{" "}
+          We provide professional auto repair, maintenance, and diagnostic
+          services to ensure your vehicle stays safe and <br /> performs at its
+          best. From basic checkups to advanced repairs — we have got you
+          covered
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         {services.map((item, index) => (
           <div
             key={index}

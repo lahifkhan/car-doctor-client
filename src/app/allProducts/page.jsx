@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdCategory } from "react-icons/md";
+import { ScaleLoader } from "react-spinners";
 
 const AllProductsPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,7 +25,11 @@ const AllProductsPage = () => {
   });
 
   if (isLoading)
-    return <p className="text-center mt-10">Loading products...</p>;
+    return (
+      <div className="flex justify-center items-center h-screen w-full ">
+        <ScaleLoader></ScaleLoader>
+      </div>
+    );
 
   if (error)
     return <p className="text-red-500 text-center">Failed to load products.</p>;
@@ -38,6 +43,8 @@ const AllProductsPage = () => {
     <div className="w-11/12 mx-auto">
       {/* Page Title */}
       <div className="text-center my-10">
+        <p className="text-primary font-bold text-xl">Products</p>
+
         <h1 className="text-3xl font-bold text-gray-800">
           Explore All Products
         </h1>
@@ -49,7 +56,7 @@ const AllProductsPage = () => {
       </div>
 
       {/* Search Input */}
-      <div className="flex justify-between mb-6 gap-8">
+      <div className="flex justify-between mb-6 ">
         <label className="input">
           <svg
             className="h-[1em] opacity-50"
