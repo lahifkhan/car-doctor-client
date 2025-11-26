@@ -4,6 +4,7 @@ import Navbar from "@/Components/Navbar";
 import { Toaster } from "react-hot-toast";
 import NextAuthProvider from "@/Providers/NextAuthProvider";
 import ReactQueryProvider from "@/Providers/QueryClientProvider";
+import Footer from "@/Components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
 
             <Toaster />
             {children}
+            <Footer></Footer>
           </ReactQueryProvider>
         </NextAuthProvider>
       </body>

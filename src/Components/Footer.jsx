@@ -6,7 +6,7 @@ import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-8">
       <footer className="footer sm:footer-horizontal bg-[#151515]  text-white p-10">
         <aside>
           <Image

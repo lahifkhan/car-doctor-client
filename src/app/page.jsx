@@ -3,7 +3,8 @@ import Services from "../Components/Services";
 import Banner from "@/Components/Banner";
 import Contact from "@/Components/Contact";
 import MeatOurTeam from "@/Components/MeatOurTeam";
-import Footer from "@/Components/Footer";
+import WhyChoseUs from "@/Components/WhyChoseUs";
+import ReviewSection from "@/Components/CustomerReview";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <Services></Services>
       <Contact></Contact>
       <MeatOurTeam></MeatOurTeam>
-      <Footer></Footer>
+      <WhyChoseUs></WhyChoseUs>
+      <ReviewSection></ReviewSection>
     </div>
   );
 }

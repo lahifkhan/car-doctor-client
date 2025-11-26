@@ -15,7 +15,7 @@ export default function AboutSection() {
             />
           </div>
 
-          <div className="absolute bottom-[-35px] right-[-30px] rounded-xl overflow-hidden shadow-xl w-[220px] h-[160px] bg-white">
+          <div className="absolute bottom-[-35px] right-[-10] md:right-[-30px]  rounded-xl overflow-hidden shadow-xl w-[220px] h-[160px] bg-white">
             <Image
               src="/assets/images/about_us/parts.jpg"
               alt="Car Service Tools"
