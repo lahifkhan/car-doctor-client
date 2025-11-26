@@ -94,7 +94,7 @@ const AllProductsPage = () => {
 
       {/* Products Grid */}
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           {filteredProducts.map((item) => (
             <div
               key={item._id}

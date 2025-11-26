@@ -14,7 +14,7 @@ const MeatOurTeam = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
         <div className="card bg-base-100 shadow-sm rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
           <figure className="h-[40vh] bg-base-200 flex items-center justify-center overflow-hidden ">
             <div className="w-full h-full rounded-t-xl overflow-hidden">
