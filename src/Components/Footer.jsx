@@ -24,6 +24,7 @@ const Footer = () => {
 
             <BsInstagram size={20} />
           </div>
+          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </aside>
         <nav>
           <h6 className="footer-title">Services</h6>
