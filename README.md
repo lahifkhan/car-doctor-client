@@ -27,7 +27,7 @@ Car Doctor is a full-stack web application that allows users to explore car serv
 
 ## Live Demo
 
-[View Live Demo](https://car-doctor-client-85y1.vercel.app/)
+[View Live Demo](https://car-doctor-client-85y1.vercel.app)
 
 ---
 
