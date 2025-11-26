@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container px-24 mx-auto py-24">
+    <div className="container w-11/12 mx-auto py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <Image
@@ -48,7 +48,7 @@ const Register = () => {
           />
         </div>
 
-        <div className="p-12">
+        <div className=" md:p-12">
           <h6 className="text-3xl font-semibold text-primary text-center mb-12">
             Register
           </h6>
