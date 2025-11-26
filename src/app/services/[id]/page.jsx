@@ -32,8 +32,8 @@ const serviceDetails = async ({ params }) => {
       </div>
 
       <div className="my-6">
-        <div className="grid grid-cols-3 gap-8">
-          <div className="col-span-2 grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-6">
             {facility.map((item, index) => (
               <div
                 className="bg-rose-100 p-4 border-t-4 border-t-rose-500 rounded-xl"
