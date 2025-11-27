@@ -90,7 +90,10 @@ const Navbar = () => {
               >
                 <li className=" py-2">
                   <p className="font-semibold">{data.user.name}</p>
-                  <p className="text-sm max-w-[150px] truncate text-gray-600">
+                  <p
+                    className="text-sm max-w-[150px] truncate text-gray-600"
+                    title={data.user.email}
+                  >
                     {data.user.email}
                   </p>
                 </li>
