@@ -90,7 +90,9 @@ const Navbar = () => {
               >
                 <li className=" py-2">
                   <p className="font-semibold">{data.user.name}</p>
-                  <p className="text-sm text-gray-600">{data.user.email}</p>
+                  <p className="text-sm text-wrap text-gray-600">
+                    {data.user.email}
+                  </p>
                 </li>
                 <li>
                   <Link href="/dashboard/addProduct">Add Product</Link>
