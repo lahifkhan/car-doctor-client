@@ -6,6 +6,11 @@ import MeatOurTeam from "@/Components/MeatOurTeam";
 import WhyChoseUs from "@/Components/WhyChoseUs";
 import ReviewSection from "@/Components/CustomerReview";
 
+export const metadata = {
+  title: "Car Doctor - Home",
+  description: "Car service, products, and repair booking platform.",
+};
+
 export default function Home() {
   return (
     <div>

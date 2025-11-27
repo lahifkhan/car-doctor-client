@@ -1,4 +1,9 @@
 import React from "react";
+export const metadata = {
+  title: "Blog | Car Doctor",
+  description:
+    "Read car maintenance tips, service guides, automotive news, and expert insights.",
+};
 
 const page = () => {
   return (

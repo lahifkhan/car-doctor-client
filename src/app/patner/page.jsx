@@ -1,7 +1,11 @@
-"use client";
 import Image from "next/image";
 import { FaInstagramSquare, FaTwitter } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
+export const metadata = {
+  title: "Our Partners | Car Doctor",
+  description:
+    "Meet the brands and companies that collaborate with Car Doctor to deliver quality service and products.",
+};
 
 const partners = [
   { id: 1, name: "BMW", logo: "/assets/images/patner/bmw.png" },

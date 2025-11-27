@@ -1,5 +1,8 @@
 import Image from "next/image";
-
+export const metadata = {
+  title: "Our About | Car Doctor",
+  description: "Explore all available car repair and maintenance services.",
+};
 export default function AboutSection() {
   return (
     <section className="py-16 px-6 md:px-16">
