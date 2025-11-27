@@ -40,7 +40,7 @@ const ProductDetailsPage = async ({ params }) => {
         <h1 className="text-3xl font-bold text-primary">{title}</h1>
         <p className="text-gray-600">{shortDescription}</p>
         <p className="text-gray-700">{fullDescription}</p>
-        <p className="text-xl font-semibold text-rose-500">Price: ${price}</p>
+        <p className="text-xl font-semibold text-primary">Price: ${price}</p>
         <p className="text-sm text-gray-500">Added by: {userEmail}</p>
         <p className="text-sm text-gray-500">
           Created at: {new Date(createdAt).toLocaleString()}
