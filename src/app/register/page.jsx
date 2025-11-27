@@ -120,7 +120,7 @@ const Register = () => {
           </form>
 
           <div>
-            <h6 className="my-12 text-center">or sign in with</h6>
+            <h6 className="my-12 text-center">or sign up with</h6>
 
             <div className="flex justify-center">
               <button
@@ -154,7 +154,7 @@ const Register = () => {
                     ></path>
                   </g>
                 </svg>
-                Login with Google
+                signUp with Google
               </button>
             </div>
 
